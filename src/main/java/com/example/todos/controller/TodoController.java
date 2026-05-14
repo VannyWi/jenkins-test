@@ -40,7 +40,6 @@ public class TodoController {
     @PostMapping
     public ResponseEntity<TodoResponse> create(@Valid @RequestBody TodoCreateRequest request) {
         TodoResponse created = todoService.create(request);
-        System.out.println("adios");
         return ResponseEntity.created(URI.create("/api/todos/" + created.id())).body(created);
     }
 
@@ -49,8 +48,7 @@ public class TodoController {
                                @Valid @RequestBody TodoUpdateRequest request) {
         return todoService.update(id, request);
     }
-//comentario
-    sadasdasd
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         todoService.delete(id);

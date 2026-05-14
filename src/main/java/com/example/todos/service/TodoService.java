@@ -96,8 +96,7 @@ public class TodoService {
         todoRepository.deleteById(id);
         log.info("operation=todo.deleted todoId={}", id);
     }
-//comentario
-    asddsadasdsaasd
+
     private TodoResponse toResponse(Todo todo) {
         return new TodoResponse(
                 todo.getId(),
